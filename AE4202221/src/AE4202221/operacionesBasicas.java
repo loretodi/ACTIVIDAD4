@@ -21,16 +21,44 @@ public class operacionesBasicas {
 	    b = s.nextInt();
 
 	    /** Calculos */
-	    suma = a + b;
-	    resta = a - b;
-		multiplicacion = a * b;
-		division = a / b;
+	    suma = suma(a, b);
+	    resta = resta(a, b);
+		multiplicacion = multiplicacion(a, b);
+		division = division(a, b);
 		
 	    /** Visualizar los resultados */
-        System.out.println( "La suma de a y b es: " + suma );
+        visualizacion(suma, resta, multiplicacion, division);
+	}
+
+	public static void visualizacion(int suma, int resta, int multiplicacion, int division) {
+		System.out.println( "La suma de a y b es: " + suma );
 	    System.out.println( "La resta de a y b es: " + resta );
 	    System.out.println( "La multiplicacion de a y b es: " + multiplicacion );
 	    System.out.println( "La division de a y b es: " + division );
+	}
+
+	public static int division(int a, int b) {
+		int division;
+		division = a / b;
+		return division;
+	}
+
+	public static int multiplicacion(int a, int b) {
+		int multiplicacion;
+		multiplicacion = a * b;
+		return multiplicacion;
+	}
+
+	public static int resta(int a, int b) {
+		int resta;
+		resta = a - b;
+		return resta;
+	}
+
+	public static int suma(int a, int b) {
+		int suma;
+		suma = a + b;
+		return suma;
 	}
 
 }
